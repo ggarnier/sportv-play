@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Evoluindo a experiência web no SporTV Play com React</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="Ao projetar a nova plataforma de vídeos ao vivo no SporTV Play durante as Olimpíadas de 2016, com foco em maior desempenho e resiliência, construímos uma nova interface web com React e outras técnicas modernas de desenvolvimento front-end">
+		<meta name="author" content="Guilherme Garnier">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -19,6 +19,17 @@
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<style>
+			.reveal section img {
+				border: 0;
+				background-color: transparent;
+				box-shadow: none;
+			}
+			.reveal li {
+				word-break: break-word;
+			}
+		</style>
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -53,8 +64,11 @@
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
-				controls: true,
-				progress: true,
+				width: 1280,
+				height: 800,
+				margin: 0.1,
+				controls: false,
+				progress: false,
 				history: true,
 				center: true,
 
@@ -63,9 +77,9 @@
 				// Optional reveal.js plugins
 				dependencies: [
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return true; } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return true; } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return true; }, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
