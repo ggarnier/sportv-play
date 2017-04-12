@@ -1,0 +1,1 @@
+![Redux](static/redux.png)

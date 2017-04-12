@@ -295,6 +295,105 @@ http://philcalcado.com/2015/09/18/the_back_end_for_front_end_pattern_bff.html
         </script>
       </section>
 
+      <section data-markdown>
+        <script type="text/template">
+          # Gerenciamento de estado
+
+- usuário
+- trial
+- menu
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          ![Redux](static/redux.png)
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          ![Redux data flow](static/redux-data-flow.jpg)
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          ```js
+import { createStore } from 'redux'
+
+// Create reducer
+counter(state = 0, action) => {
+  switch (action.type) {
+  case 'INCREMENT':
+    return state + 1
+  case 'DECREMENT':
+    return state - 1
+  default:
+    return state
+  }
+}
+
+// Create store
+let store = createStore(counter)
+
+// React to store changes
+store.subscribe(() =>
+  console.log(store.getState())
+)
+
+// Dispatch actions
+store.dispatch({ type: 'INCREMENT' }) // 1
+store.dispatch({ type: 'INCREMENT' }) // 2
+store.dispatch({ type: 'DECREMENT' }) // 1
+```
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          ![MobX](static/mobx.png)
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          ```js
+import {observable, autorun} from 'mobx'
+
+const counter = observable(0)
+
+autorun(() => console.log(counter.get()))
+
+counter.set(counter.get() + 1) // 1
+counter.set(counter.get() + 1) // 2
+counter.set(counter.get() - 1) // 1
+```
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          ![](static/you-might-not-need-redux.png)
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          > "Redux offers a tradeoff..."
+
+> "... if you’re just learning React, don’t make Redux your first choice."
+
+        </script>
+      </section>
+
 
 			</div>
 
