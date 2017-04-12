@@ -227,6 +227,74 @@ class TweetBox extends Component {
         </script>
       </section>
 
+      <section data-markdown>
+        <script type="text/template">
+          ![Without BFF](static/no-bff-architecture.png)
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          # Problemas
+
+- Muitas APIs internas
+- Muitas requisições
+- Acoplamento entre apps antigas e novas
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          # Back-end for Front-end
+
+![BFF](static/bff.png)
+
+http://samnewman.io/patterns/architectural/bff/
+
+http://philcalcado.com/2015/09/18/the_back_end_for_front_end_pattern_bff.html
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          ![With BFF](static/bff-architecture.png)
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          # Vantagens
+
+- APIs específicas
+- Desacoplamento entre apps
+- Otimização (menos requisições, payload menor)
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          # Desvantagens
+
+- duplicação de código
+- duplicação de APIs
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          # Acoplamento
+
+![BFF team ownership](static/bff-team-ownership.jpg)
+
+        </script>
+      </section>
+
 
 			</div>
 
