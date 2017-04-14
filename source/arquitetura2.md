@@ -1,5 +1,1 @@
-# Problemas
-
-- Muitas APIs internas
-- Muitas requisições
-- Acoplamento entre apps antigas e novas
+![Without BFF](static/no-bff-architecture.png)

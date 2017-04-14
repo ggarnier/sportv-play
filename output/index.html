@@ -229,6 +229,13 @@ class TweetBox extends Component {
 
       <section data-markdown>
         <script type="text/template">
+          # Arquitetura das APIs
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
           ![Without BFF](static/no-bff-architecture.png)
 
         </script>
@@ -390,6 +397,178 @@ counter.set(counter.get() - 1) // 1
           > "Redux offers a tradeoff..."
 
 > "... if you’re just learning React, don’t make Redux your first choice."
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          # Arquitetura do CSS
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          ```js
+class HelloWorld extends Component {
+  render() {
+    const styles = {
+      margin: "10px",
+      color: "red"
+    }
+    return (
+      <div style={styles}>
+        Hello, world!
+      </div>
+    )
+  }
+}
+```
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          ![Thinking](static/meme-thinking.jpg)
+
+# CSS inline?
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          # CSS inline
+
+## Problemas
+
+- não permite cachear estilos (gera payload maior)
+- não suporta pseudo classes (*:first*, *:hover*, *:last-child*)
+- não suporta media queries
+- não permite aplicar estilo em cascata
+	- ex: *header img { border: "1px solid black" }*
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          # CSS inline
+
+## Vantagens
+
+- não precisa realizar um request extra para o CSS
+- isolamento
+- facilita manutenção (evita código não usado)
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          # CSS in JS
+
+```js
+import disabledColor from "./constants"
+
+class HelloWorld extends Component {
+  state = {
+		enabled: true
+	}
+
+  render() {
+    const styles = {
+      marginBottom: "5px",
+      color: this.state.enabled ? "red" : disabledColor
+    }
+
+    return (
+      <div style={styles}>
+        Hello, world!
+      </div>
+    )
+  }
+}
+```
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          ![Radium](static/radium.png)
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          ```js
+class Alert extends Component {
+  getStyles() {
+    const status = {
+      notification: "#0074D9",
+      success: "#27AE60",
+      error: "#E74C3C"
+    }
+
+    return {
+      alert: {
+        position: "relative",
+        width: "100%",
+        padding: "5px",
+        borderRadius: "3px",
+        backgroundColor: status.notification,
+        color: "white",
+        textAlign: "center",
+        fontFamily: "'Helvetica Neue', sans-serif",
+        success: {
+          backgroundColor: status.success
+        },
+        error: {
+          backgroundColor: status.error
+        },
+
+        "@media (min-width: 320px)": {
+          fontSize: "15px"
+        }
+      },
+      closeButton: {
+        position: "absolute",
+        right: "10px",
+        color: color(status[this.props.type]).lighten(0.2).hexString(),
+        ":hover": {
+          color: color(status[this.props.type]).lighten(0.5).hexString(),
+          cursor: "pointer"
+        }
+      }
+    }
+  }
+  render() {
+    const styles = this.getStyles()
+    return (
+      <div style={[styles.alert, styles.alert[this.props.type]]}>
+        { this.props.message }
+        <span style={styles.closeButton}>&#x2715;</span>
+      </div>
+    )
+  }
+}
+```
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          # Radium
+
+## Problemas
+
+- performance (pseudo classes e media queries resolvidos por JS)
+- não resolve problema de estilos em cascata (*header img { ... }*)
 
         </script>
       </section>
