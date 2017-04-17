@@ -6,4 +6,4 @@
 - não suporta pseudo classes (*:first*, *:hover*, *:last-child*)
 - não suporta media queries
 - não permite aplicar estilo em cascata
-	- ex: *header img { border: "1px solid black" }*
+  - ex: **header img { border: "1px solid black" }**

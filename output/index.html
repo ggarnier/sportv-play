@@ -448,7 +448,7 @@ class HelloWorld extends Component {
 - não suporta pseudo classes (*:first*, *:hover*, *:last-child*)
 - não suporta media queries
 - não permite aplicar estilo em cascata
-	- ex: *header img { border: "1px solid black" }*
+  - ex: **header img { border: "1px solid black" }**
 
         </script>
       </section>
@@ -475,8 +475,8 @@ import disabledColor from "./constants"
 
 class HelloWorld extends Component {
   state = {
-		enabled: true
-	}
+    enabled: true
+  }
 
   render() {
     const styles = {
@@ -735,6 +735,93 @@ https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0
 - interface dos componentes
 - ownership (quem é responsável por um bug?)
 - documentação (Atellier, Storybook)
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          # Otimizações
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          # Stateless components
+
+https://hackernoon.com/react-stateless-functional-components-nine-wins-you-might-have-overlooked-997b0d933dbc
+
+```js
+const Footer = (props) => {
+  return (
+    <footer>
+      <p>© 2017 Globo Comunicação e Participações S.A.</p>
+      <a href={props.url}>Política de Privacidade</a>
+    </footer>
+  )
+}
+```
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          # Cachear callbacks
+
+```js
+class VideoList extends Component {
+  thumbClick() {
+    metrics.register(`click video-list #{this.props.name`)
+  }
+
+  render() {
+    <VideoThumb title="video 1" onClick={this.thumbClick.bind(this)}>
+    <VideoThumb title="video 2" onClick={this.thumbClick.bind(this)}>
+  }
+}
+```
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          # Cachear callbacks
+
+```js
+const sum = (a, b) => a + b
+
+const bind1 = sum.bind(this)
+const bind2 = sum.bind(this)
+
+bind1 == bind1 // false
+bind1 == bind2 // false
+```
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          # Cachear callbacks
+
+```js
+class Home extends Component {
+  constructor() {
+    this.thumbClickCallback = this.thumbClick.bind(this)
+  }
+
+  thumbClick() {
+    metrics.register(`click video-list #{this.props.name`)
+  }
+
+  render() {
+    <VideoThumb onClick={this.thumbClickCallback}>
+  }
+}
+```
 
         </script>
       </section>

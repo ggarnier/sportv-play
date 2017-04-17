@@ -5,8 +5,8 @@ import disabledColor from "./constants"
 
 class HelloWorld extends Component {
   state = {
-		enabled: true
-	}
+    enabled: true
+  }
 
   render() {
     const styles = {
