@@ -1,1 +1,1 @@
-![Globo Play](static/globo-play-logo.png)
+![Globo Play](static/globo-play-home.png)
