@@ -493,7 +493,8 @@ class HelloWorld extends Component {
 
       <section data-markdown>
         <script type="text/template">
-          ![Thinking](static/meme-thinking.jpg)
+          <!-- .slide: data-background-color="#fff" -->
+![Thinking](static/meme-thinking.jpg)
 
 # CSS inline?
 
@@ -506,11 +507,11 @@ class HelloWorld extends Component {
 
 ## Problemas
 
-- não permite cachear estilos (gera payload maior)
-- não suporta pseudo classes (*:first*, *:hover*, *:last-child*)
+- não permite reaproveitar estilos
+- não suporta pseudo classes (**:hover**, **:last-child**)
 - não suporta media queries
 - não permite aplicar estilo em cascata
-  - ex: **header img { border: "1px solid black" }**
+  - ex: ** header img { border: "1px solid black" }**
 
         </script>
       </section>
@@ -560,7 +561,7 @@ class HelloWorld extends Component {
 
       <section data-markdown>
         <script type="text/template">
-          ![Radium](static/radium.png)
+          <!-- .slide: data-background-color="#2f2f2f" data-background-image="static/radium.png" data-background-size="contain" -->
 
         </script>
       </section>
@@ -571,43 +572,21 @@ class HelloWorld extends Component {
 class Alert extends Component {
   getStyles() {
     const status = {
-      notification: "#0074D9",
       success: "#27AE60",
       error: "#E74C3C"
     }
-
     return {
       alert: {
-        position: "relative",
-        width: "100%",
-        padding: "5px",
-        borderRadius: "3px",
-        backgroundColor: status.notification,
-        color: "white",
-        textAlign: "center",
-        fontFamily: "'Helvetica Neue', sans-serif",
-        success: {
-          backgroundColor: status.success
-        },
-        error: {
-          backgroundColor: status.error
-        },
-
-        "@media (min-width: 320px)": {
-          fontSize: "15px"
-        }
+        success: { backgroundColor: status.success },
+        error: { backgroundColor: status.error },
+        "@media (min-width: 320px)": { fontSize: "15px" }
       },
       closeButton: {
-        position: "absolute",
-        right: "10px",
         color: color(status[this.props.type]).lighten(0.2).hexString(),
-        ":hover": {
-          color: color(status[this.props.type]).lighten(0.5).hexString(),
-          cursor: "pointer"
-        }
       }
     }
   }
+
   render() {
     const styles = this.getStyles()
     return (
@@ -630,7 +609,7 @@ class Alert extends Component {
 ## Problemas
 
 - performance (pseudo classes e media queries resolvidos por JS)
-- não resolve problema de estilos em cascata (*header img { ... }*)
+- não resolve problema de estilos em cascata (** header img { ... }**)
 
         </script>
       </section>
@@ -639,9 +618,9 @@ class Alert extends Component {
         <script type="text/template">
           # Alternativas
 
-- https://github.com/Khan/aphrodite
-- CSS Modules
-- CSS puro!
+- https://github.com/Khan/aphrodite <!-- .element: class="fragment" data-fragment-index="1" -->
+- CSS Modules <!-- .element: class="fragment" data-fragment-index="2" -->
+- CSS puro! <!-- .element: class="fragment" data-fragment-index="3" -->
 
         </script>
       </section>
