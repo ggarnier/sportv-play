@@ -25,7 +25,7 @@
         word-break: break-word;
       }
       .reveal pre code {
-        max-height: 500px;
+        max-height: 800px;
       }
     </style>
 
@@ -213,8 +213,9 @@ https://talentos.globo.com <!-- .element: class="fragment" data-fragment-index="
         <script type="text/template">
           # Componentes
 
-<img src="static/polymer.png" style="width: 200px; margin-right: 30px" />
-<img src="static/reactjs.png" style="width: 200px; margin-left: 30px" />
+<img src="static/polymer.png" style="width: 200px" />
+<img src="static/reactjs.png" style="width: 200px; margin: 0 50px" />
+<img src="static/ember.png" style="width: 200px" />
 
 <img src="static/angularjs.png" style="width: 400px; margin-right: 50px" />
 <img src="static/vue.png" style="width: 180px" />
@@ -239,7 +240,7 @@ https://talentos.globo.com <!-- .element: class="fragment" data-fragment-index="
       <section data-markdown>
         <script type="text/template">
           ```js
-// Imperativo, c/ jQuery
+// Modelo imperativo, c/ jQuery
 $("button").prop("disabled", true)
 
 $("textarea").on("input", function() {
@@ -252,7 +253,7 @@ $("textarea").on("input", function() {
 ```
 
 ```js
-// Declarativo, c/ React
+// Modelo declarativo, c/ React
 class TweetBox extends Component {
   state = { text: "" }
 
@@ -367,8 +368,8 @@ http://philcalcado.com/2015/09/18/the_back_end_for_front_end_pattern_bff.html
         <script type="text/template">
           # Gerenciamento de estado
 
-- usuário
-- trial
+- dados do usuário
+- campanhas de trial
 - menu
 
         </script>
@@ -383,7 +384,7 @@ http://philcalcado.com/2015/09/18/the_back_end_for_front_end_pattern_bff.html
 
       <section data-markdown>
         <script type="text/template">
-          ![Redux data flow](static/redux-data-flow.jpg)
+          <!-- .slide: data-background-image="static/redux-data-flow.jpg" data-background-size="auto 90%" -->
 
         </script>
       </section>
@@ -424,7 +425,7 @@ store.dispatch({ type: 'DECREMENT' }) // 1
 
       <section data-markdown>
         <script type="text/template">
-          ![MobX](static/mobx.png)
+          <!-- .slide: data-background-color="#fff" data-background-image="static/mobx.png" data-background-size="contain" -->
 
         </script>
       </section>
@@ -448,7 +449,7 @@ counter.set(counter.get() - 1) // 1
 
       <section data-markdown>
         <script type="text/template">
-          ![](static/you-might-not-need-redux.png)
+          <!-- .slide: data-background-color="#fff" data-background-image="static/you-might-not-need-redux.png" data-background-size="contain" -->
 
         </script>
       </section>

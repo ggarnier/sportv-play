@@ -1,5 +1,5 @@
 # Gerenciamento de estado
 
-- usuário
-- trial
+- dados do usuário
+- campanhas de trial
 - menu

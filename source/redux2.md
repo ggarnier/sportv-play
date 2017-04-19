@@ -1,1 +1,1 @@
-![Redux data flow](static/redux-data-flow.jpg)
+<!-- .slide: data-background-image="static/redux-data-flow.jpg" data-background-size="auto 90%" -->
