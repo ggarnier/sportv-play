@@ -1,1 +1,1 @@
-![React](static/react.svg)
+![React](static/reactjs.png)

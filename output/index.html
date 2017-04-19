@@ -210,33 +210,32 @@ https://talentos.globo.com <!-- .element: class="fragment" data-fragment-index="
         <script type="text/template">
           # Componentes
 
-![Polymer](static/polymer.png)
-![React](static/react.svg)
-![Angular](static/angularjs.svg)
-![Vue](static/vue.png)
+<img src="static/polymer.png" style="width: 200px; margin-right: 30px" />
+<img src="static/reactjs.png" style="width: 200px; margin-left: 30px" />
+
+<img src="static/angularjs.png" style="width: 400px; margin-right: 50px" />
+<img src="static/vue.png" style="width: 180px" />
 
         </script>
       </section>
 
       <section data-markdown>
         <script type="text/template">
-          ![React](static/react.svg)
+          ![React](static/reactjs.png)
 
         </script>
       </section>
 
       <section data-markdown>
         <script type="text/template">
-          ![React lifecycle](static/react-lifecycle.png)
+          <!-- .slide: data-background-color="#fff" data-background-image="static/react-lifecycle.png" data-background-size="contain" -->
 
         </script>
       </section>
 
       <section data-markdown>
         <script type="text/template">
-          # Modelo declarativo
-
-```js
+          ```js
 // Declarativo, c/ jQuery
 $("button").prop("disabled", true)
 
@@ -252,9 +251,7 @@ $("textarea").on("input", function() {
 ```js
 // Imperativo, c/ React
 class TweetBox extends Component {
-  state = {
-    text: ""
-  }
+  state = { text: "" }
 
   handleChange(event) {
     this.setState({ text: event.target.value })
@@ -896,7 +893,7 @@ class Home extends Component {
 
       <section data-markdown>
         <script type="text/template">
-          ![React](static/react.svg)
+          ![React](static/reactjs.png)
 
 - facilitou a criação de componentes
 - maduro e evoluindo rapidamente

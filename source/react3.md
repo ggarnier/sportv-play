@@ -1,5 +1,3 @@
-# Modelo declarativo
-
 ```js
 // Declarativo, c/ jQuery
 $("button").prop("disabled", true)
@@ -16,9 +14,7 @@ $("textarea").on("input", function() {
 ```js
 // Imperativo, c/ React
 class TweetBox extends Component {
-  state = {
-    text: ""
-  }
+  state = { text: "" }
 
   handleChange(event) {
     this.setState({ text: event.target.value })

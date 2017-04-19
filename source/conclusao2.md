@@ -1,4 +1,4 @@
-![React](static/react.svg)
+![React](static/reactjs.png)
 
 - facilitou a criação de componentes
 - maduro e evoluindo rapidamente
