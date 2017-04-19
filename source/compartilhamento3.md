@@ -1,4 +1,4 @@
-## Biblioteca para compartilhar componentes de vídeo
+## Biblioteca de componentes de vídeo
 
 <div style="display: flex; align-items: center; justify-content: space-around">
   ![componentes](static/lib.png)

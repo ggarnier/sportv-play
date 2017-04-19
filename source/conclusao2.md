@@ -1,10 +1,5 @@
-![React](static/reactjs.png)
+<img src="static/reactjs.png" style="width: 200px" />
 
-- facilitou a criação de componentes
-- maduro e evoluindo rapidamente
-- ecossistema crescente
-- gerenciamento de estado
-  - MobX para aplicações menores
-  - Redux para aplicações mais complexas
-- arquitetura do CSS em discussão
-- compartilhar componentes não é tão simples quanto parece
+- facilitou a criação de componentes <!-- .element: class="fragment" data-fragment-index="1" -->
+- maduro e evoluindo rapidamente <!-- .element: class="fragment" data-fragment-index="2" -->
+- ecossistema crescente <!-- .element: class="fragment" data-fragment-index="3" -->

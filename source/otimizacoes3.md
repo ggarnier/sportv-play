@@ -3,7 +3,7 @@
 ```js
 class VideoList extends Component {
   thumbClick() {
-    metrics.register(`click video-list #{this.props.name`)
+    metrics.register(`click video-list #{this.props.name}`)
   }
 
   render() {
