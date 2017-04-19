@@ -1,5 +1,5 @@
 ```js
-// Declarativo, c/ jQuery
+// Imperativo, c/ jQuery
 $("button").prop("disabled", true)
 
 $("textarea").on("input", function() {
@@ -12,7 +12,7 @@ $("textarea").on("input", function() {
 ```
 
 ```js
-// Imperativo, c/ React
+// Declarativo, c/ React
 class TweetBox extends Component {
   state = { text: "" }
 

@@ -24,6 +24,9 @@
       .reveal li {
         word-break: break-word;
       }
+      .reveal pre code {
+        max-height: 500px;
+      }
     </style>
 
 		<!-- Printing and PDF exports -->
@@ -236,7 +239,7 @@ https://talentos.globo.com <!-- .element: class="fragment" data-fragment-index="
       <section data-markdown>
         <script type="text/template">
           ```js
-// Declarativo, c/ jQuery
+// Imperativo, c/ jQuery
 $("button").prop("disabled", true)
 
 $("textarea").on("input", function() {
@@ -249,7 +252,7 @@ $("textarea").on("input", function() {
 ```
 
 ```js
-// Imperativo, c/ React
+// Declarativo, c/ React
 class TweetBox extends Component {
   state = { text: "" }
 
@@ -273,14 +276,14 @@ class TweetBox extends Component {
 
       <section data-markdown>
         <script type="text/template">
-          ![React components](static/react-components.png)
+          <!-- .slide: data-background-color="#fff" data-background-image="static/react-components.png" data-background-size="auto 95%" -->
 
         </script>
       </section>
 
       <section data-markdown>
         <script type="text/template">
-          ![Globo Play](static/globo-play-home.png)
+          <!-- .slide: data-background-color="#000" data-background-image="static/globo-play-home.png" data-background-size="contain" -->
 
         </script>
       </section>
