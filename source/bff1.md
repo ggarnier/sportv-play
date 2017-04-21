@@ -1,6 +1,4 @@
-# Back-end for Front-end
-
-![BFF](static/bff.png)
+# Back-end for Front-end pattern
 
 http://samnewman.io/patterns/architectural/bff/
 
