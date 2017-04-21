@@ -22,3 +22,5 @@ class HelloWorld extends Component {
   }
 }
 ```
+
+<span class="fragment current-only" data-code-focus="11"></span>

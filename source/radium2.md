@@ -23,3 +23,6 @@ class Alert extends Component {
   }
 }
 ```
+
+<span class="fragment current-only" data-code-focus="6-7"></span>
+<span class="fragment current-only" data-code-focus="18"></span>

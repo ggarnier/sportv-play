@@ -13,3 +13,6 @@ class HelloWorld extends Component {
   }
 }
 ```
+
+<span class="fragment current-only" data-code-focus="3-6"></span>
+<span class="fragment current-only" data-code-focus="8"></span>

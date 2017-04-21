@@ -16,3 +16,6 @@ class Home extends Component {
   }
 }
 ```
+
+<span class="fragment current-only" data-code-focus="3"></span>
+<span class="fragment current-only" data-code-focus="11-12"></span>
