@@ -1,5 +1,8 @@
-# Alternativas
+# Radium
+## Alternativas
 
-- https://github.com/Khan/aphrodite <!-- .element: class="fragment" data-fragment-index="1" -->
-- CSS Modules <!-- .element: class="fragment" data-fragment-index="2" -->
-- CSS puro! <!-- .element: class="fragment" data-fragment-index="3" -->
+<ul>
+  <li>https://github.com/Khan/aphrodite</li> <!-- .element: class="fragment" data-fragment-index="1" -->
+  <li>CSS Modules</li> <!-- .element: class="fragment" data-fragment-index="2" -->
+  <li>CSS puro!</li> <!-- .element: class="fragment" data-fragment-index="3" -->
+</ul>

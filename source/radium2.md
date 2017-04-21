@@ -1,18 +1,14 @@
 ```js
 class Alert extends Component {
   getStyles() {
-    const status = {
-      success: "#27AE60",
-      error: "#E74C3C"
-    }
     return {
       alert: {
-        success: { backgroundColor: status.success },
-        error: { backgroundColor: status.error },
-        "@media (min-width: 320px)": { fontSize: "15px" }
-      },
-      closeButton: {
-        color: color(status[this.props.type]).lighten(0.2).hexString(),
+        backgroundColor: "white",
+        ":hover": { cursor: "pointer" },
+        "@media (min-width: 320px)": { fontSize: "15px" },
+
+        success: { backgroundColor: "green" },
+        error: { backgroundColor: "red" }
       }
     }
   }
@@ -22,7 +18,6 @@ class Alert extends Component {
     return (
       <div style={[styles.alert, styles.alert[this.props.type]]}>
         { this.props.message }
-        <span style={styles.closeButton}>&#x2715;</span>
       </div>
     )
   }

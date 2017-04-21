@@ -2,4 +2,3 @@
 
 - dados do usuário
 - campanhas de trial
-- menu

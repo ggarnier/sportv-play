@@ -11,7 +11,8 @@ class Home extends Component {
   }
 
   render() {
-    <VideoThumb onClick={this.thumbClickCallback}>
+    <VideoThumb title="video 1" onClick={this.thumbClickCallback}>
+    <VideoThumb title="video 2" onClick={this.thumbClickCallback}>
   }
 }
 ```

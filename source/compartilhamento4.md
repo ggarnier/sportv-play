@@ -6,4 +6,3 @@
   - incluir dependências no bundle ou não
 - interface dos componentes <!-- .element: class="fragment" data-fragment-index="3" -->
 - ownership (quem é responsável por corrigir um bug?) <!-- .element: class="fragment" data-fragment-index="4" -->
-- documentação (Atellier, Storybook) <!-- .element: class="fragment" data-fragment-index="5" -->
