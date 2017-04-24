@@ -1,1 +1,0 @@
-![React](static/reactjs.png)
